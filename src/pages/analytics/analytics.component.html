@@ -1,20 +1,20 @@
 <div>
-    <div class="meetlink__portal-header p-2 m-4 w-90 font-semibold text-[20px] text-blue">
+    <div class="meetlink__portal-header p-2 m-4 w-90 font-semibold text-[20px] text-blue font-sans">
         Analytics Overview
     </div>
     <div class='flex w-90 m-2 gap-4'>
-        <div *ngFor="let item of Card" class=" w-[100%] p-8 mx-2 h-full shadow-lg rounded"
+        <div *ngFor="let item of Card" class=" w-[100%] p-4 mx-2 h-full shadow-lg rounded"
             [style.background-color]="item.color">
-            <div class="flex justify-between gap-4 w-full p-5 items-center rounded text-[45px] text-white font-bold">
+            <div class="flex justify-between gap-4 w-full  items-center rounded text-[35px] text-white font-bold">
                 {{ item.numberCount }}
                 <svg-icon [src]="item.icon" [svgStyle]="{'width.px': 50}"></svg-icon>
             </div>
-            <div class="p-4 text-[20px] text-white mt-40]">
+            <div class="text-[16px] text-white mt-10 font-sans">
                 {{item.title}}
             </div>
         </div>
     </div>
-    <div class="meetlink__subheader flex w-[100%] justify-between items-center my-10">
+    <div class="meetlink__subheader flex w-[100%] justify-between items-center my-10 font-sans">
         <div class="flex bg-border/5 w-[60%] border gap-3 p-4 mx-6 my-5 rounded items-center">
             <img src="../../assets/report-analysis.png" class="" />
             <div>
@@ -33,19 +33,19 @@
             </mat-form-field>
         </div>
     </div>
-
     <!-- Analytic section -->
     <div class="p-2 w-90">
-        <div class="meetlink__portal-header text-blue text-[20px] font-light">
+        <div class="meetlink__portal-header text-blue text-[20px] font-light font-sans">
             Analytics
         </div>
         <div class="flex gap-48">
             <div class="w-[50%]">
                 <app-visitor-analytics-chart></app-visitor-analytics-chart>
             </div>
-
             <div class="shadow-lg w-[30%] h-[50vh]"> 
- 
+                <div class="p-4 font-sans text-[20px] font-semibold">
+                    Visitor's Category
+                </div>
             </div>
         </div>
 

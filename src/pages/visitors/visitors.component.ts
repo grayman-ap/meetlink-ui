@@ -43,21 +43,23 @@ export class VisitorsComponent {
   ];
   getStatusColor(status: string): string {
     if (status === 'Checked In') {
-      return 'bg-green text-white p-6';
+      return 'bg-green text-white p-4';
     } 
     else if(
         status === 'Expected'){
-          return 'bg-[blue]/80 text-white p-6'
+          return 'bg-[blue]/80 text-white p-4'
         }
         else if(
+          status === 'Checked Out'){
+            return 'bg-red text-white p-4'
+          }
+        else if(
           status === 'Unexpected'){
-            return 'bg-blue text-white p-6'
+            return 'bg-blue text-white p-4'
           }
       
-    
-    else if (status === 'Checked Out') {
-      return 'bg-red text-white p-6';
-    } else {
+  
+   else {
       return '';
     }
   }
@@ -157,6 +159,7 @@ export class VisitorsComponent {
       host: 'Ahamadu Bello',
       visitor: 'Mohammed Sodiq',
       meetingId: '#555 343 3232',
+      image:"../assets/avatar.png",
       color:'green'
     },
     {

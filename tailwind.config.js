@@ -13,6 +13,9 @@ module.exports = {
         darkGreen:'2EA487',
         red:"#FF3030",
         lightBlue: "#0B5CFF"
+      },
+      fontFamily: {
+        'sans': ['Poppins', 'Arial', 'sans-serif'],
       }
     },
   },

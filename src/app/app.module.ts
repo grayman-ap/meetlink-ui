@@ -30,6 +30,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { VisitorAnalyticsChartComponent } from '../components/visitor-analytics-chart/visitor-analytics-chart.component';
 import { DonutChartComponent } from './donut-chart/donut-chart.component';
+import { QrCodeModule } from 'ng-qrcode';
+
 
 library.add(fas);
 @NgModule({
@@ -64,6 +66,7 @@ library.add(fas);
     MatButtonModule,
     MatPaginatorModule,
     FontAwesomeModule,
+    QrCodeModule,
     AngularSvgIconModule.forRoot() ,
   ],
   providers: [],
