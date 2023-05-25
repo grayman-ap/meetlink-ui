@@ -1,0 +1,82 @@
+<div>
+    <div class="flex items-center justify-between w-[100%]">
+    <div class="meetlink__portal-header p-2 m-4 w-90 font-semibold text-[20px] text-blue">
+       Visitors LogBook
+    </div>
+    <div class="bg-border/5 w-[40%] p-4 rounded">
+        <div class="flex mx-5 gap-10 rounded">
+            <svg-icon src="../../assets/search.svg" [svgStyle] = "{'width.px': 20, 'fill': '#003366'}"/>
+            <input type="text" placeholder="Search visits, members, people" class="w-full outline-none border-none bg-transparent mx-5" />
+        </div>
+
+      </div>
+    <div class="w-[20%] mr-20">
+        <button onclick="{()=> alert('download')}" class=" flex items-center justify-center gap-5 bg-blue hover:bg-blue/80 transition-all ease-in-out p-4 text-white text-[18px] font-bold w-[100%] rounded" type="button">
+            <svg-icon src="../../assets/download.svg" [svgStyle] = "{'width.px': 20, 'fill': 'white'}"/>
+            Download
+        </button>
+    </div>
+</div>
+<div class="flex gap-5 border w-[60%] justify-between p-3 m-6">
+    <div *ngFor="let item of Status">
+        <div  class="flex w-full p-2 gap-10 items-center text-blue">
+            {{item}}
+            <div class="w-[1px] h-[50px] bg-border/10"></div>
+        </div>
+    </div>
+</div>
+<table class="my-table w-[100%]">
+    <thead class="w-[100%]">
+      <tr class="table-header mb-10 p-10">
+        <th *ngFor="let header of headerData">
+            <div class="p-4 mb-5">
+                {{ header.label }}
+            </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody class="w-[100%] text-center">
+        <tr *ngFor="let header of bodyData"  class="table-row" >
+            <td class="text-white flex items-center justify-between">
+                <div [ngClass]="[getStatusColor(header.status) + '', 'w-[100%]', 'rounded-l-md']">
+                  {{ header.status }}
+                </div>
+                <div mat-icon-button [matMenuTriggerFor]="dropdownMenu" [ngClass]="[getArrowColor(header.status) + 'w-[30%]', 'p-6', 'flex', 'justify-center', 'rounded-r-md']">
+                  <svg-icon src="../../assets/angle-down.svg" [svgStyle]="{'width.px': 20, 'fill': 'white'}"></svg-icon>
+                  <mat-menu #dropdownMenu="matMenu">
+                    <button mat-menu-item (click)="changeStatus(header, 'Checked In')">Checked In</button>
+                    <button mat-menu-item (click)="changeStatus(header, 'Unexpected')">Unexpected</button>
+                    <button mat-menu-item (click)="changeStatus(header, 'Expected')">Expected</button>
+                    <button mat-menu-item (click)="changeStatus(header, 'Checked Out')">Checked Out</button>
+                  </mat-menu>
+                </div>
+              </td>
+          <td>
+            {{ header.checkin }}
+          </td>
+          <td>
+            {{ header.checkout }}
+          </td>
+          <td>
+            {{ header.date }}
+          </td>
+          <td>
+            {{ header.host }}
+          </td>
+          <td>
+            <div class="flex items-center justify-center gap-5">
+                <img src={{header.image}} alt="avatar" class="w-[60px] rounded-full"/>
+                {{ header.visitor }}
+            </div>
+       
+          </td>
+          <td>
+            {{ header.meetingId }}
+          </td>
+        </tr>
+      </tbody>
+      
+  </table>
+  
+
+</div>

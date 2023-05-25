@@ -1,0 +1,18 @@
+<div class="flex flex-col items-center justify-center w-[100%] h-[100%]">
+    <div class=" w-[30%] shadow-lg rounded-lg">
+    <div class="flex flex-col items-center my-5">
+        <svg-icon src="../../assets/vector/logo.svg" [svgStyle]="{'width.px': 100}"/>
+        <div class="text-[20px] text-blue font-bold my-2">SignIn</div>
+    </div>
+    <div class="w-[100%] flex flex-col items-center justify-center">
+        <input type="text" placeholder="Email" class="bg-transparent border border-blue/10 w-[80%] p-5 rounded my-10 focus:outline-none"/>
+        <input type="text" placeholder="Password" class="bg-transparent border border-blue/10 w-[80%] p-5 rounded  focus:outline-none"/>
+        <button type="submit" class="w-[80%] cursor-pointer hover:bg-blue/90 transition-all ease-linear bg-blue p-5 my-10 rounded text-white" (click)="navigateToHome()">SignIn</button>
+        <p>Forget password?</p>
+        <div class="w-[100%] flex flex-col justify-center items-center my-10 gap-4 ">
+        <p>Don't have an account? Sign up</p>
+        <button type="submit" class="w-[80%] cursor-pointer hover:bg-blue/90 transition-all ease-linear  bg-blue p-5  rounded text-white">Create new account</button>
+    </div>
+</div>
+    </div>
+</div> 

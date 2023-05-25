@@ -1,0 +1,72 @@
+<div>
+    <div class="flex items-center justify-between w-[100%] mb-10">
+        <div class="meetlink__portal-header p-2 m-4 w-90 font-semibold text-[20px] text-blue">
+            Employees
+        </div>
+        <div class="bg-border/5 w-[40%] p-4 rounded">
+            <div class="flex mx-5 gap-10 rounded">
+                <svg-icon src="../../assets/search.svg" [svgStyle]="{'width.px': 20, 'fill': '#003366'}" />
+                <input type="text" placeholder="Search for employees at Nexus Limited"
+                    class="w-full outline-none border-none bg-transparent mx-5" />
+            </div>
+
+        </div>
+        <div class="w-[30%] mr-20 flex gap-5">
+            <button onclick="{()=> alert('download')}"
+                class="flex items-center justify-center gap-5 bg-green hover:bg-green/80 transition-all ease-in-out p-4 text-white text-[18px] font-bold w-[100%] rounded"
+                type="button">
+                <svg-icon src="../../assets/plus.svg" [svgStyle]="{'width.px': 20, 'fill': 'white'}" />
+                Add Employee
+            </button>
+            <button onclick="{()=> alert('download')}"
+                class=" flex items-center justify-center gap-5 bg-blue hover:bg-blue/80 transition-all ease-in-out p-4 text-white text-[18px] font-bold w-[100%] rounded"
+                type="button">
+                <svg-icon src="../../assets/download.svg" [svgStyle]="{'width.px': 20, 'fill': 'white'}" />
+                Download Info
+            </button>
+        </div>
+    </div>
+    <div class="">
+        <table class="my-table w-[100%] mb-40">
+            <thead class="w-[100%]">
+                <tr class="table-header mb-10 p-10">
+                    <th *ngFor="let header of headerData">
+                        <div class="p-4 mb-5 border-y">
+                            {{ header.label }}
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="w-[100%] text-center">
+                <tr *ngFor="let header of bodyData" class="table-row">
+                    <td class="flex items-center justify-center">
+                        <img src={{header.photo}} alt="avatar" class="w-[70px] items-center rounded-full" />
+                    </td>
+                    <td>
+                        {{ header.name }}
+                    </td>
+                    <td>
+                        {{ header.email }}
+                    </td>
+                    <td>
+                        {{ header.mobile }}
+                    </td>
+                    <td>
+                        {{ header.hosted }}
+                    </td>
+                    <td>
+                        <div class="flex items-center justify-center gap-7">
+                            <button><svg-icon src="../../assets/user-delete.svg"
+                                    [svgStyle]="{'width.px': 20, 'fill': 'green'}" /></button>
+                            <button> <svg-icon src="../../assets/delete.svg"
+                                    [svgStyle]="{'width.px': 15, 'fill': 'red'}" /></button>
+
+                            <!-- {{ header.action }} -->
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+</div>
