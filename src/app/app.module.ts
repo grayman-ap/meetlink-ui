@@ -5,15 +5,15 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SidebarComponent } from '../components/sidebar/sidebar.component';
-import { SignupComponent } from '../pages/signup/signup.component';
-import { AnalyticsComponent } from '../pages/analytics/analytics.component';
-import { MainContentComponent } from '../components/main-content/main-content.component';
-import { VisitorsComponent } from '../pages/visitors/visitors.component';
-import { EmployeesComponent } from '../pages/employees/employees.component';
-import { UsersComponent } from '../pages/users/users.component';
-import { MeetingsComponent } from '../pages/meetings/meetings.component';
-import { HeaderComponent } from '../components/header/header.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { SignupComponent } from './pages/signup/signup.component';
+import { AnalyticsComponent } from './pages/analytics/analytics.component';
+import { MainContentComponent } from './components/main-content/main-content.component';
+import { VisitorsComponent } from './pages/visitors/visitors.component';
+import { EmployeesComponent } from './pages/employees/employees.component';
+import { UsersComponent } from './pages/users/users.component';
+import { MeetingsComponent } from './pages/meetings/meetings.component';
+import { HeaderComponent } from './components/header/header.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -28,9 +28,11 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
-import { VisitorAnalyticsChartComponent } from '../components/visitor-analytics-chart/visitor-analytics-chart.component';
+import { VisitorAnalyticsChartComponent } from './components/visitor-analytics-chart/visitor-analytics-chart.component';
 import { DonutChartComponent } from './donut-chart/donut-chart.component';
 import { QrCodeModule } from 'ng-qrcode';
+import { EmployeeDetailComponent } from './pages/employee-detail/employee-detail.component';
+import { UserDetailsComponent } from './pages/user-details/user-details.component';
 
 
 library.add(fas);
@@ -48,6 +50,8 @@ library.add(fas);
     HeaderComponent,
     VisitorAnalyticsChartComponent,
     DonutChartComponent,
+    EmployeeDetailComponent,
+    UserDetailsComponent,
   ],
   imports: [
     BrowserModule,

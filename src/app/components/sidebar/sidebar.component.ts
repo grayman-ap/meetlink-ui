@@ -7,5 +7,6 @@ import { SideBarItem } from './sidebarItem';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent {
+[x: string]: any;
 Items = SideBarItem
 }
