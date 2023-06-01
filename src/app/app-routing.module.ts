@@ -16,6 +16,7 @@ const routes: Routes = [
   {path: 'visitors-logbook', component: VisitorsComponent},
   {path: 'employees', component: EmployeesComponent},
   {path: 'employees/details/:uid', component: EmployeeDetailComponent},
+  {path: 'employees/apply/:uid', component: EmployeeDetailComponent},
   {path: 'users', component: UsersComponent},
   {path: 'users/details/:uid', component: UserDetailsComponent},
   {path: 'meetings', component: MeetingsComponent},
